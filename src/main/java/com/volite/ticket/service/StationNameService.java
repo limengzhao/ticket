@@ -18,23 +18,29 @@ public class StationNameService {
      * @param url
      * @return
      */
-    public String getStationName(String urlParam){
-        
+    public String getStationName(String urlParam){ 
        String station_names=Communication.GetConnection (urlParam);
-       File file=new File ("");
-        if(file.exists ()){
-            
-            try {
-                InputStream is=new FileInputStream (file);
-                OutputStream os=new FileOutputStream (file);
-                
-            } catch (FileNotFoundException e) {
-                System.out.println ("站名写入文件异常!");
-            }
-            
-        }else{
-            System.out.println ("站名文件不存在!");
-        }
+       String []station_names_array= station_names.split ("'");
+       String stationNames=station_names_array[1];
+       String[] stationName=stationNames.split ("@");
+       for (int i = 1; i < stationName.length; i++) {
+          System.out.println ( stationName[i]);
+    }
+       
+      
+       
+       
+       
+       
+//       String [] str=station_names.split ("@");
+//       System.out.println ("length: "+str.length);
+//       for (int i = 0; i < str.length; i++) {
+//        System.out.println (str[i]);
+//    }
+       
+       
+       
+      
        
        
        

@@ -32,7 +32,6 @@ public class Communication {
             br.close ();
             dis.close ();
             is.close ();
-            System.out.println ("station_names: "+builder.toString ());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,6 +1,5 @@
 package com.volite.ticket.common;
 
-import java.io.File;
 
 public class Common {
     
@@ -9,7 +8,6 @@ public class Common {
      */
     public static void readFile(){
         
-        File file=new File ("");
         
         
     } 
